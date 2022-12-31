@@ -1,0 +1,38 @@
+﻿{
+  "facets": [
+    {
+      "typeId": "it.vedph.geo.asserted-locations",
+      "name": "locations",
+      "description": "Locations.",
+      "colorKey": "31AB54",
+      "groupKey": "test",
+      "sortKey": "a"
+    },
+    {
+      "typeId": "it.vedph.geo.asserted-toponyms",
+      "name": "toponyms",
+      "description": "Toponyms.",
+      "colorKey": "31AB54",
+      "groupKey": "test",
+      "sortKey": "b"
+    }
+  ],
+  "seed": {
+    "options": {
+      "seed": 1,
+      "baseTextPartTypeId": "it.vedph.token-text",
+      "users": [ "zeus" ],
+      "partRoles": [],
+      "fragmentRoles": []
+    },
+    "partSeeders": [
+      {
+        "id": "seed.it.vedph.geo.asserted-locations"
+      },
+      {
+        "id": "seed.it.vedph.geo.asserted-toponyms"
+      }
+    ],
+    "fragmentSeeders": []
+  }
+}
