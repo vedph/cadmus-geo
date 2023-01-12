@@ -9,6 +9,12 @@ namespace Cadmus.Geo.Parts
     public class AssertedToponym : IHasAssertion
     {
         /// <summary>
+        /// Gets or sets an optional tag. This can be used to distinguish different
+        /// types of toponyms.
+        /// </summary>
+        public string? Tag { get; set; }
+
+        /// <summary>
         /// Gets or sets an optional entity ID for this toponym.
         /// </summary>
         public string? Eid { get; set; }

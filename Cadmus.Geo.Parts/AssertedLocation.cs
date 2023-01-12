@@ -12,6 +12,12 @@ namespace Cadmus.Geo.Parts;
 public class AssertedLocation : IHasAssertion
 {
     /// <summary>
+    /// Gets or sets an optional tag. This can be used to distinguish different
+    /// types of locations.
+    /// </summary>
+    public string? Tag { get; set; }
+
+    /// <summary>
     /// Gets or sets the reference point for this location.
     /// </summary>
     public LocationPoint Point { get; set; }
