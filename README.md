@@ -17,7 +17,7 @@ Each location has at least a reference point (latitude and longitude); it can ad
 Additionally, each location can have an assertion (from [Cadmus bricks](https://github.com/vedph/cadmus-bricks)) representing its certainty level and documentary references.
 
 - `locations` (`AssertedLocation[]`):
-  - tag (string, optional thesaurus: `location-tags`)
+  - tag (string, optional thesaurus: `geo-location-tags`)
   - `point`\* (`LocationPoint`):
     - `lat` (double)
     - `lon` (double)
@@ -43,7 +43,7 @@ A set of toponyms each having an optional assertion.
 Each toponym is a composite proper name (from [Cadmus bricks](https://github.com/vedph/cadmus-bricks)), with an optional entity ID and assertion.
 
 - `toponyms` (`AssertedToponym[]`):
-  - tag (string, optional thesaurus: `toponym-tags`)
+  - tag (string, optional thesaurus: `geo-toponym-tags`)
   - `eid` (string)
   - `name`\* (`ProperName`):
     - `language` (string)
