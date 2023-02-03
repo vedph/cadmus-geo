@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 using Cadmus.Core;
-using Fusi.Tools.Config;
+using Fusi.Tools.Configuration;
 
 namespace Cadmus.Geo.Parts;
 

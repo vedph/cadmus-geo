@@ -2,7 +2,7 @@
 using Cadmus.Core;
 using Cadmus.Geo.Parts;
 using Cadmus.Refs.Bricks;
-using Fusi.Tools.Config;
+using Fusi.Tools.Configuration;
 using System;
 using System.Linq;
 using System.Collections.Generic;

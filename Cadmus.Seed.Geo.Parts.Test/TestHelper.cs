@@ -2,8 +2,7 @@
 using Cadmus.Core.Config;
 using Cadmus.Geo.Parts;
 using Fusi.Microsoft.Extensions.Configuration.InMemoryJson;
-using Microsoft.Extensions.Configuration;
-using SimpleInjector;
+using Microsoft.Extensions.Hosting;
 using System;
 using System.IO;
 using System.Reflection;
@@ -31,7 +30,7 @@ static internal class TestHelper
         return reader.ReadToEnd();
     }
 
-    static public PartSeederFactory GetFactory()
+    private static IHost GetHost(string config)
     {
         // map
         TagAttributeToTypeMap map = new();
@@ -43,23 +42,24 @@ static internal class TestHelper
             typeof(AssertedLocationsPart).Assembly
         });
 
-        // container
-        Container container = new();
-        PartSeederFactory.ConfigureServices(
-            container,
-            new StandardPartTypeProvider(map),
-            new[]
-            {
-                // Cadmus.Seed.Geo.Parts
-                typeof(AssertedLocationsPartSeeder).Assembly
-            });
+        return new HostBuilder().ConfigureServices((hostContext, services) =>
+        {
+            PartSeederFactory.ConfigureServices(services,
+                new StandardPartTypeProvider(map),
+                new[]
+                {
+                    // Cadmus.Seed.Geo.Parts
+                    typeof(AssertedLocationsPartSeeder).Assembly
+                });
+        })
+            // extension method from Fusi library
+            .AddInMemoryJson(config)
+            .Build();
+    }
 
-        // config
-        IConfigurationBuilder builder = new ConfigurationBuilder()
-            .AddInMemoryJson(LoadResourceText("SeedConfig.json"));
-        var configuration = builder.Build();
-
-        return new PartSeederFactory(container, configuration);
+    static public PartSeederFactory GetFactory()
+    {
+        return new PartSeederFactory(GetHost(LoadResourceText("SeedConfig.json")));
     }
 
     static public void AssertPartMetadata(IPart part)

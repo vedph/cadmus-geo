@@ -3,18 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadmus.Geo.Parts", "Cadmus.Geo.Parts\Cadmus.Geo.Parts.csproj", "{91E0062E-8F11-4D9C-B7F2-00CC2009EDC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadmus.Geo.Parts", "Cadmus.Geo.Parts\Cadmus.Geo.Parts.csproj", "{91E0062E-8F11-4D9C-B7F2-00CC2009EDC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadmus.Seed.Geo.Parts", "Cadmus.Seed.Geo.Parts\Cadmus.Seed.Geo.Parts.csproj", "{F1F4B9B9-A55F-40D9-8E53-5D6B0B7393A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadmus.Seed.Geo.Parts", "Cadmus.Seed.Geo.Parts\Cadmus.Seed.Geo.Parts.csproj", "{F1F4B9B9-A55F-40D9-8E53-5D6B0B7393A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadmus.Geo.Parts.Test", "Cadmus.Geo.Parts.Test\Cadmus.Geo.Parts.Test.csproj", "{5B579A8F-3A85-462A-96C1-1F604186CEB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadmus.Geo.Parts.Test", "Cadmus.Geo.Parts.Test\Cadmus.Geo.Parts.Test.csproj", "{5B579A8F-3A85-462A-96C1-1F604186CEB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadmus.Seed.Geo.Parts.Test", "Cadmus.Seed.Geo.Parts.Test\Cadmus.Seed.Geo.Parts.Test.csproj", "{5BE198A8-B84C-4772-BFBD-6BBFC7AD5E40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadmus.Seed.Geo.Parts.Test", "Cadmus.Seed.Geo.Parts.Test\Cadmus.Seed.Geo.Parts.Test.csproj", "{5BE198A8-B84C-4772-BFBD-6BBFC7AD5E40}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6DCF56DD-C0B8-4797-B158-A7D3CAD67762}"
 	ProjectSection(SolutionItems) = preProject
 		Pack.bat = Pack.bat
 		Push.bat = Push.bat
+		PushLocal.bat = PushLocal.bat
 		README.md = README.md
 	EndProjectSection
 EndProject
