@@ -6,7 +6,7 @@ namespace Cadmus.Geo.Parts
     /// A toponym with an optional assertion.
     /// </summary>
     /// <seealso cref="IHasAssertion" />
-    public class AssertedToponym : IHasAssertion
+    public class AssertedToponym
     {
         /// <summary>
         /// Gets or sets an optional tag. This can be used to distinguish different
@@ -22,19 +22,14 @@ namespace Cadmus.Geo.Parts
         /// <summary>
         /// Gets or sets the toponym.
         /// </summary>
-        public ProperName Name { get; set; }
-
-        /// <summary>
-        /// Gets or sets the optional assertion.
-        /// </summary>
-        public Assertion? Assertion { get; set; }
+        public AssertedProperName Name { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AssertedToponym"/> class.
         /// </summary>
         public AssertedToponym()
         {
-            Name = new ProperName();
+            Name = new AssertedProperName();
         }
 
         /// <summary>
@@ -45,8 +40,7 @@ namespace Cadmus.Geo.Parts
         /// </returns>
         public override string ToString()
         {
-            return $"{(Eid != null? "#" + Eid : "")} {Name}" +
-                (Assertion != null ? "*" : "");
+            return $"{(Eid != null? "#" + Eid : "")} {Name}";
         }
     }
 }

@@ -45,15 +45,19 @@ Each toponym is a composite proper name (from [Cadmus bricks](https://github.com
 - `toponyms` (`AssertedToponym[]`):
   - tag (string, optional thesaurus: `geo-toponym-tags`)
   - `eid` (string)
-  - `name`\* (`ProperName`):
+  - `name`\* (`AssertedProperName`):
     - `language` (string)
     - `tag` (string)
     - `pieces` (`ProperNamePiece[]`):
       - `type`\* (string)
       - `value`\* (string)
-  - `assertion` (`Assertion`)
+    - `assertion` (`Assertion`)
 
 ## History
+
+### 1.0.1
+
+- 2023-02-11: fix to toponym assertion (inside proper name, not outside of it).
 
 ### 1.0.0
 

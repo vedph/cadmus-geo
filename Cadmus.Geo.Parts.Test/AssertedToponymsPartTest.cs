@@ -80,7 +80,7 @@ namespace Cadmus.Geo.Parts.Test
                 part.Toponyms.Add(new AssertedToponym
                 {
                     Eid = $"t{n}",
-                    Name = new ProperName
+                    Name = new AssertedProperName
                     {
                         Pieces= new List<ProperNamePiece>
                         {
