@@ -55,6 +55,8 @@ Each toponym is a composite proper name (from [Cadmus bricks](https://github.com
 
 ## History
 
+- 2023-03-02: updated packages in test projects.
+
 ### 1.0.1
 
 - 2023-02-11: fix to toponym assertion (inside proper name, not outside of it).
