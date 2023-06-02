@@ -55,6 +55,8 @@ Each toponym is a composite proper name (from [Cadmus bricks](https://github.com
 
 ## History
 
+- 2023-06-02: updated test packages.
+
 ### 2.0.0
 
 - 2023-05-24: updated packages (breaking change in general parts introducing [AssertedCompositeId](https://github.com/vedph/cadmus-bricks-shell/blob/master/projects/myrmidon/cadmus-refs-asserted-ids/README.md#asserted-composite-id)).
