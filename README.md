@@ -3,6 +3,12 @@
 - [Cadmus Geographic Parts](#cadmus-geographic-parts)
   - [AssertedLocationsPart](#assertedlocationspart)
   - [AssertedToponymsPart](#assertedtoponymspart)
+  - [History](#history)
+    - [2.0.1](#201)
+    - [2.0.0](#200)
+    - [1.0.1](#101)
+    - [1.0.0](#100)
+    - [0.0.1](#001)
 
 This library contains soome general purpose, minimalist geographic models for dealing with geographic location of Cadmus items.
 
@@ -55,6 +61,9 @@ Each toponym is a composite proper name (from [Cadmus bricks](https://github.com
 
 ## History
 
+### 2.0.1
+
+- 2023-06-17: updated packages.
 - 2023-06-02: updated test packages.
 
 ### 2.0.0
