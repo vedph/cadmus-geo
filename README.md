@@ -4,6 +4,7 @@
   - [AssertedLocationsPart](#assertedlocationspart)
   - [AssertedToponymsPart](#assertedtoponymspart)
   - [History](#history)
+    - [2.0.2](#202)
     - [2.0.1](#201)
     - [2.0.0](#200)
     - [1.0.1](#101)
@@ -60,6 +61,10 @@ Each toponym is a composite proper name (from [Cadmus bricks](https://github.com
     - `assertion` (`Assertion`)
 
 ## History
+
+### 2.0.2
+
+- 2023-09-04: updated packages.
 
 ### 2.0.1
 
