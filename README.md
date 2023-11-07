@@ -62,6 +62,10 @@ Each toponym is a composite proper name (from [Cadmus bricks](https://github.com
 
 ## History
 
+### 2.0.3
+
+- 2023-11-07: updated packages.
+
 ### 2.0.2
 
 - 2023-09-04: updated packages.
