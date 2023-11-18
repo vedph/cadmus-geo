@@ -4,6 +4,8 @@
   - [AssertedLocationsPart](#assertedlocationspart)
   - [AssertedToponymsPart](#assertedtoponymspart)
   - [History](#history)
+    - [3.0.0](#300)
+    - [2.0.3](#203)
     - [2.0.2](#202)
     - [2.0.1](#201)
     - [2.0.0](#200)
@@ -61,6 +63,10 @@ Each toponym is a composite proper name (from [Cadmus bricks](https://github.com
     - `assertion` (`Assertion`)
 
 ## History
+
+### 3.0.0
+
+- 2023-11-18: ⚠️ Upgraded to .NET 8.
 
 ### 2.0.3
 
