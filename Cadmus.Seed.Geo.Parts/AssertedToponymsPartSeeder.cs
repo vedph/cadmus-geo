@@ -54,7 +54,7 @@ public sealed class AssertedToponymsPartSeeder : PartSeederBase
     public override IPart? GetPart(IItem item, string? roleId,
         PartSeederFactory? factory)
     {
-        if (item == null) throw new ArgumentNullException(nameof(item));
+        ArgumentNullException.ThrowIfNull(item);
 
         AssertedToponymsPart part = new Faker<AssertedToponymsPart>()
            .RuleFor(p => p.Toponyms, f => GetNames(

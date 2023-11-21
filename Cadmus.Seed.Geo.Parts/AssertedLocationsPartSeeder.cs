@@ -27,7 +27,7 @@ public sealed class AssertedLocationsPartSeeder : PartSeederBase
     public override IPart? GetPart(IItem item, string? roleId,
         PartSeederFactory? factory)
     {
-        if (item == null) throw new ArgumentNullException(nameof(item));
+        ArgumentNullException.ThrowIfNull(item);
 
         AssertedLocationsPart part = new Faker<AssertedLocationsPart>()
            .RuleFor(p => p.Locations, f =>
