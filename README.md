@@ -10,6 +10,8 @@ The models are provided without Cadmus components services, as they are meant to
 
 ## History
 
+- 2024-11-20: updated test packages.
+
 ### 4.0.0
 
 - 2024-11-18: ⚠️ upgraded to .NET 9.
