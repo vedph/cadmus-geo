@@ -12,7 +12,7 @@ Each toponym is a composite proper name (from [Cadmus bricks](https://github.com
   - name\* (`AssertedProperName`):
     - language (string)
     - tag (string)
-    - pieces (`ProperNamePiece[]`):
+    - pieces (🧱 [ProperNamePiece[]](https://github.com/vedph/cadmus-bricks/blob/master/docs/proper-name-piece.md)):
       - type\* (string)
       - value\* (string)
-    - assertion (`Assertion`)
+    - assertion (🧱 [Assertion](https://github.com/vedph/cadmus-bricks/blob/master/docs/assertion.md))

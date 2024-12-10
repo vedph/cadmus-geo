@@ -21,7 +21,7 @@ Additionally, each location can have an assertion (from [Cadmus bricks](https://
   - assertion (`Assertion`):
     - tag (`string`)
     - rank (`short`)
-    - references (`DocReference[]`):
+    - references (🧱 [DocReference[]](https://github.com/vedph/cadmus-bricks/blob/master/docs/doc-reference.md)):
       - type (`string`)
       - tag (`string`)
       - citation (`string`)
