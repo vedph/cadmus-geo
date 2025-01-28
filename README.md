@@ -10,6 +10,9 @@ The models are provided without Cadmus components services, as they are meant to
 
 ## History
 
+### 4.0.2
+
+- 2025-01-28: updated packages.
 - 2024-12-23: updated test packages.
 
 ### 4.0.1
