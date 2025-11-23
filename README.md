@@ -10,6 +10,10 @@ The models are provided without Cadmus components services, as they are meant to
 
 ## History
 
+### 5.0.0
+
+- 2025-11-23: ⚠️ upgraded to NET 10.
+
 ### 4.0.6
 
 - 2025-10-08: updated packages.
