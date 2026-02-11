@@ -78,7 +78,11 @@ public sealed class AssertedLocationsPartTest
         {
             part.Locations.Add(new AssertedLocation
             {
-                Point = new LocationPoint(n, n * 10)
+                Value = new GeoLocation
+                {
+                    Latitude = n,
+                    Longitude = n * 10
+                }
             });
         }
 

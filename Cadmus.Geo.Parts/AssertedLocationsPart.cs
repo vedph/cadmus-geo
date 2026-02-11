@@ -16,15 +16,7 @@ public sealed class AssertedLocationsPart : PartBase
     /// <summary>
     /// Gets or sets the entries.
     /// </summary>
-    public List<AssertedLocation> Locations { get; set; }
-
-    /// <summary>
-    /// Initializes a new instance of the <see cref="AssertedLocationsPart"/> class.
-    /// </summary>
-    public AssertedLocationsPart()
-    {
-        Locations = new List<AssertedLocation>();
-    }
+    public List<AssertedLocation> Locations { get; set; } = [];
 
     /// <summary>
     /// Get all the key=value pairs (pins) exposed by the implementor.
@@ -32,8 +24,7 @@ public sealed class AssertedLocationsPart : PartBase
     /// <param name="item">The optional item. The item with its parts
     /// can optionally be passed to this method for those parts requiring
     /// to access further data.</param>
-    /// <returns>The pins: <c>tot-count</c> and a collection of pins with
-    /// these keys: ....</returns>
+    /// <returns>The pins: <c>tot-count</c> and a collection of pins.</returns>
     public override IEnumerable<DataPin> GetDataPins(IItem? item = null)
     {
         DataPinBuilder builder = new();
@@ -43,11 +34,11 @@ public sealed class AssertedLocationsPart : PartBase
         if (Locations?.Count > 0)
         {
             int n = 0;
-            foreach (LocationPoint point in Locations.Select(l => l.Point))
+            foreach (GeoLocation? point in Locations.Select(l => l.Value))
             {
                 n++;
-                builder.AddValue($"lat{n}", point.Lat);
-                builder.AddValue($"lon{n}", point.Lon);
+                builder.AddValue($"lat{n}", point.Latitude);
+                builder.AddValue($"lon{n}", point.Longitude);
             }
         }
 
@@ -60,8 +51,8 @@ public sealed class AssertedLocationsPart : PartBase
     /// <returns>Data pins definitions.</returns>
     public override IList<DataPinDefinition> GetDataPinDefinitions()
     {
-        return new List<DataPinDefinition>(new[]
-        {
+        return new List<DataPinDefinition>(
+        [
             new DataPinDefinition(DataPinValueType.Integer,
                "tot-count",
                "The total count of locations."),
@@ -70,9 +61,8 @@ public sealed class AssertedLocationsPart : PartBase
                 "The latitude of the N-th location in set."),
             new DataPinDefinition(DataPinValueType.Decimal,
                 "lon<N>",
-                "The longitude of the N-th location in set.",
-                "M")
-        });
+                "The longitude of the N-th location in set.")
+        ]);
     }
 
     /// <summary>

@@ -10,6 +10,10 @@ The models are provided without Cadmus components services, as they are meant to
 
 ## History
 
+### 6.0.0
+
+- 2026-02-11: ⚠️ refactored geographic location model in `AssertedLocation`. This is a breaking change, even if no information is lost with reference to the previous model.
+
 ### 5.0.1
 
 - 2026-01-17: updated packages.

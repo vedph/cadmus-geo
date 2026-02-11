@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Text;
 
 namespace Cadmus.Geo.Parts;
 
 /// <summary>
-/// A geographic location.
+/// A single geographic location, defined by a point (latitude and longitude,
+/// and optionally an altitude) with a label, plus optionally an uncertainty
+/// radius, a geometric representation, and a note.
 /// </summary>
 public class GeoLocation
 {
@@ -29,8 +29,8 @@ public class GeoLocation
     /// <summary>
     /// Gets or sets the longitude coordinate, expressed in degrees.
     /// </summary>
-    /// <remarks>Valid longitude values range from -180.0 (west) to 180.0 (east)
-    /// .</remarks>
+    /// <remarks>Valid longitude values range from -180.0 (west) to 180.0
+    /// (east).</remarks>
     public double Longitude { get; set; }
 
     /// <summary>
@@ -63,4 +63,24 @@ public class GeoLocation
     /// Gets or sets the additional notes associated with the entity.
     /// </summary>
     public string? Note { get; set; }
+
+    /// <summary>
+    /// Converts this object to a string representation.
+    /// </summary>
+    /// <returns>String.</returns>
+    public override string ToString()
+    {
+        StringBuilder sb = new();
+        sb.Append(Label);
+        if (Latitude != 0 || Longitude != 0)
+        {
+            sb.Append($" ({Latitude}, {Longitude}");
+            if (Altitude.HasValue)
+                sb.Append($", {Altitude.Value} m");
+            if (Radius.HasValue)
+                sb.Append($", ±{Radius.Value} m");
+            sb.Append(')');
+        }
+        return sb.ToString();
+    }
 }

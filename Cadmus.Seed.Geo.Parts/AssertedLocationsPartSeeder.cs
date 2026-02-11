@@ -3,7 +3,6 @@ using Cadmus.Core;
 using Cadmus.Geo.Parts;
 using Fusi.Tools.Configuration;
 using System;
-using System.Collections.Generic;
 
 namespace Cadmus.Seed.Geo.Parts;
 
@@ -32,14 +31,17 @@ public sealed class AssertedLocationsPartSeeder : PartSeederBase
         AssertedLocationsPart part = new Faker<AssertedLocationsPart>()
            .RuleFor(p => p.Locations, f =>
             {
-                return new List<AssertedLocation>
-                {
-                    new AssertedLocation
+                return
+                [
+                    new()
                     {
-                        Point = new LocationPoint(f.Address.Latitude(),
-                            f.Address.Longitude())
+                        Value = new GeoLocation
+                        {
+                            Latitude = f.Address.Latitude(),
+                            Longitude = f.Address.Longitude()
+                        }
                     }
-                };
+                ];
             })
            .Generate();
         SetPartMetadata(part, roleId, item);
