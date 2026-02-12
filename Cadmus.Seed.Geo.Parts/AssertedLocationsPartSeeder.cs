@@ -37,6 +37,7 @@ public sealed class AssertedLocationsPartSeeder : PartSeederBase
                     {
                         Value = new GeoLocation
                         {
+                            Label = f.Address.City(),
                             Latitude = f.Address.Latitude(),
                             Longitude = f.Address.Longitude()
                         }
