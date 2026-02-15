@@ -10,6 +10,10 @@ The models are provided without Cadmus components services, as they are meant to
 
 ## History
 
+### 6.0.2
+
+- 2026-02-15: updated packages.
+
 ### 6.0.1
 
 - 2026-02-12: add label to location seeder.
