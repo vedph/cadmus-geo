@@ -6,9 +6,12 @@
     "it.vedph.geo.asserted-toponyms": {
       "thesauriIds": [
         "geo-toponym-tags",
+        "geo-name-tags",
+        "geo-name-languages",
+        "geo-name-piece-types",
         "assertion-tags",
-        "doc-reference-tags",
-        "doc-reference-types"
+        "doc-reference-types",
+        "doc-reference-tags"
       ]
     }
   }
