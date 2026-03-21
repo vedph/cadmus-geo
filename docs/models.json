@@ -1,0 +1,15 @@
+{
+  "parts": {
+    "it.vedph.geo.asserted-locations": {
+      "thesauriIds": ["geo-location-tags"]
+    },
+    "it.vedph.geo.asserted-toponyms": {
+      "thesauriIds": [
+        "geo-toponym-tags",
+        "assertion-tags",
+        "doc-reference-tags",
+        "doc-reference-types"
+      ]
+    }
+  }
+}
