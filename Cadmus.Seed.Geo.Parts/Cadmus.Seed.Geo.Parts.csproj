@@ -1,30 +1,37 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
-    <ImplicitUsings>disable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-	  <IncludeSymbols>true</IncludeSymbols>
-	  <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-	  <Authors>Daniele Fusi</Authors>
-	  <Company>Fusi</Company>
-	  <Product>Cadmus</Product>
-	  <Description>Cadmus generic geography seeder components.</Description>
-	  <NeutralLanguage>en-US</NeutralLanguage>
-	  <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
-	  <Copyright>by Daniele Fusi</Copyright>
-	  <PackageTags>Cadmus;geography</PackageTags>
-	  <Version>6.0.3</Version>
-	  <FileVersion>6.0.3</FileVersion>
-	  <AssemblyVersion>6.0.3</AssemblyVersion>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<Authors>Daniele Fusi</Authors>
+		<Company>Fusi</Company>
+		<Product>Cadmus</Product>
+		<Description>Cadmus generic geography seeder components.</Description>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+		<Copyright>by Daniele Fusi</Copyright>
+		<PackageTags>Cadmus;geography</PackageTags>
+		<DebugType>portable</DebugType>
+		<DebugSymbols>true</DebugSymbols>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+		<Deterministic>true</Deterministic>
+		<Version>6.0.4</Version>
+		<FileVersion>6.0.4</FileVersion>
+		<AssemblyVersion>6.0.4</AssemblyVersion>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Cadmus.Seed" Version="10.1.5" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Cadmus.Seed" Version="15.0.0" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" Version="10.0.301" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Cadmus.Geo.Parts\Cadmus.Geo.Parts.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Cadmus.Geo.Parts\Cadmus.Geo.Parts.csproj" />
+	</ItemGroup>
 
 </Project>

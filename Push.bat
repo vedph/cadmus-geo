@@ -4,7 +4,7 @@ prompt
 set nu=C:\Exe\nuget.exe
 set src=-Source https://api.nuget.org/v3/index.json
 
-%nu% push .\Cadmus.Geo.Parts\bin\Debug\*.nupkg %src%
-%nu% push .\Cadmus.Seed.Geo.Parts\bin\Debug\*.nupkg %src%
+%nu% push .\Cadmus.Geo.Parts\bin\Release\*.nupkg %src%
+%nu% push .\Cadmus.Seed.Geo.Parts\bin\Release\*.nupkg %src%
 echo COMPLETED
 echo on
