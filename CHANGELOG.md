@@ -1,5 +1,11 @@
 # History
 
+## 7.0.0
+
+- 2026-11-14: ⚠️ upgraded to .NET 11.
+
+## 6.0.6
+
 - 2026-09-27:
   - updated packages.
   - migrated tests to MTP.
